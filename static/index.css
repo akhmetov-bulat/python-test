@@ -1,0 +1,23 @@
+.title{
+    color: black;
+    font-size: 200%;
+    flex: auto;
+    flex-direction: row;
+}
+.name {
+    color: red;
+    font-size: 200%;
+}
+
+.menu {
+    color: green;
+    font-size: 150%;
+    flex: auto;
+    flex-direction: row;
+
+}
+.mark {
+    color: red;
+    font-size: 150%;
+    text-decoration: underline;
+}

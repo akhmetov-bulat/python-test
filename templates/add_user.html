@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="static\add_user.css">
+    <title>Title</title>
+</head>
+<body>
+<p class = 'title'><b>База данных</b></p>
+<div class = 'menu'>
+    <a href="/" class = 'menu'>Все пользователи</a>
+    <a href="/search" class = 'menu'>Поиск</a>
+    <a href="/add_user" class = 'menu'><b>Добавить</b></a>
+</div>
+<form name = 'add_user' action="/add_user" method="post">
+<input type = 'text' name = 'name' placeholder="Name">
+<input type="number" name = 'age' min="1" max="99" placeholder="age">
+<label for="block">Заблокировать пользователя</label>
+<input type = 'checkbox' id = 'block' name = 'is_blocked'>
+<input type = 'date' name = 'unblock_date'>
+<input type = 'submit' name = 'submit'>
+</form>
+
+
+</body>
+</html>

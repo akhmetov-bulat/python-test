@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="static/search.css">
+    <title>search</title>
+</head>
+<body>
+<p class = 'title'><b>База данных</b></p>
+<div class = 'menu'>
+    <a href="/" class = 'menu'>Все пользователи</a>
+    <a href="/search" class = 'menu'><b>Поиск</b></a>
+    <a href="/add_user" class = 'menu'>Добавить</a>
+</div>
+<form name = 'search' action = '/search' method = 'post'>
+<input  type="text" name = "seek_req" class = 'search_bar' placeholder="имя пользователя" >
+<input type="submit" value="Отправить">
+</form>
+<ul>
+    {% if found_users %}
+    {% for user in found_users %}
+    {% if user['is_blocked'] %}
+    <li><span class = "name">{{user['name']}}</span>, {{user['age']}},
+        Заблокирован, разблокируется
+         {{user['unblock_date']}}
+    </li>
+    {% else %}
+        <li> <span class = "name">{{user['name']}}</span> , {{user['age']}},
+    </li>
+    {% endif %}
+    {% endfor %}
+    {% endif %}
+</ul>
+</body>
+
+</html>
